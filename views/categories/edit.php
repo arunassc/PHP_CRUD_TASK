@@ -31,15 +31,15 @@ if (!isset($_GET['id'])) {
                 <form action="./edit.php" method="POST">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter Name" value="<?= $category->name ?>">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="<?= $category->name ?>">
                     </div>
                     <div class="form-group">
                         <label for="description">Description:</label>
                         <input type="text" class="form-control" name="description" placeholder="Enter Description" value="<?= $category->description ?>">
                     </div>
                     <div class="form-group">
-                        <label for="photo">Photo:</label>
-                        <input type="text" class="form-control" id="photo" placeholder="Enter id"  value="<?= $category->id ?>">
+                        <label for="photo">Photo URL:</label>
+                        <input type="text" class="form-control" id="photo" name="photo" placeholder="Enter Photo URL"  value="<?= $category->photo ?>">
                     </div>
                     <input type="hidden" name="id" value="<?= $category->id ?>">
                     <button type="submit" class="btn btn-primary">Submit</button>
