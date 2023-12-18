@@ -1,15 +1,14 @@
 body {
-    background-image: linear-gradient(rgb(230, 170, 170), rgb(209, 209, 156), rgb(154, 154, 226));
+    background-image: linear-gradient(rgb(231, 204, 204), rgb(199, 199, 179), rgb(207, 207, 212));
     font-family: sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 110px;
 }
 
 h1,
@@ -22,28 +21,64 @@ p {
     color: #555;
 }
 
-.btn-success {
+.btn-primary {
     display: inline-block;
-    padding: 8px 25px;
+    padding: 7px 25px;
     font-size: 15px;
     text-decoration: none;
-    background-color: #28a745;
+    background-color: #471df1;
+    border: 1px solid #231c1c;
     color: #fff;
     border-radius: 4px;
     transition: background-color 0.3s;
     cursor: pointer;
 }
 
+.btn-success {
+    display: inline-block;
+    padding: 7px 25px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #28a745;
+    border: 1px solid #231c1c;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn-danger {
+    display: inline-block;
+    padding: 7px 25px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #cc1616;
+    border: 1px solid #231c1c;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #6424d3;
+}
+
 .btn-success:hover {
     background-color: #218838;
 }
 
+.btn-danger:hover {
+    background-color: #d31717;
+}
+
 .card {
     margin: 20px 0;
-    border: 1px solid #ddd;
+    border: 1px solid #f1ebeb;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .card:hover {
@@ -53,7 +88,7 @@ p {
 .card-img-top {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
+    border: 1px solid #231c1c;
     border-radius: 8px 8px 0 0;
 }
 
@@ -70,4 +105,10 @@ p {
 .card-text {
     font-size: 10px;
     color: #555;
+}
+
+footer {
+    background-color: #cbd2da;
+    padding: 5px;
+    text-align: center;
 }

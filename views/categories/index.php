@@ -10,18 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
 
 $categories = CategoryController::getAll();
 
+include_once "../components/head.php";
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="your-actual-integrity-hash" crossorigin="anonymous">
-    <link href="../../css/main.css" rel="stylesheet" integrity="your-integrity-hash" crossorigin="anonymous">
-    <title>Computer</title>
-</head>
 
 <body>
     <div class="container">
@@ -47,6 +38,7 @@ $categories = CategoryController::getAll();
             <?php endforeach; ?>
         </div>
     </div>
-</body>
 
-</html>
+    <?php
+    include_once "../components/footer.php";
+    ?>
