@@ -1,7 +1,15 @@
 <?php
 include "../../Controllers/CategoryController.php";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
+    CategoryController::destroy($_POST['id']);
+
+    header("Location: index.php");
+    die;
+}
+
 $categories = CategoryController::getAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +38,10 @@ $categories = CategoryController::getAll();
                     <div class="d-flex p-2 bd-highlight justify-content-center">
                         <a class="btn btn-primary mx-2" href="./show.php?id=<?= $category->id ?>">Show</a>
                         <a class="btn btn-success mx-2" href="./edit.php?id=<?= $category->id ?>">Edit</a>
-                        <a class="btn btn-danger mx-2" href="./delete.php?id=<?= $category->id ?>">Delete</a>
+                        <form action="./index.php" method="post">
+                            <input type="hidden" name="id" value="<?= $category->id ?>">
+                            <button class="btn btn-danger mx-2" type="submit">Delete</button>
+                        </form>
                     </div>
                 </div>
             <?php endforeach; ?>
